@@ -38,6 +38,8 @@ for line in sys.stdin:
     date, time, item, category, sales, payment = data
     if len(data) < 6:
 	print('There are not 6 elements in the tuple')
+    
+    category == 'Computers', 'Cameras', 'Video Games'
 
     # Write the key-value combination to standard output (stdout)
     # Key is the payment, value is the sales     
