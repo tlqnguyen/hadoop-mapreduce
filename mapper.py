@@ -36,13 +36,15 @@ for line in sys.stdin:
 
     # store the 6 elements of the tuple in seperate variables
     date, time, item, category, sales, payment = data
-    if len(data) < 6:
-	print('There are not 6 elements in the tuple')
+    if len(data) != 6:
+	raise ValueError('There are not 6 elements in the tuple')
     
-    category == 'Computers', 'Cameras', 'Video Games'
-
+    category_list = ['Computers', 'Cameras', 'Video Games']
+    if category in category_list: 
     # Write the key-value combination to standard output (stdout)
     # Key is the payment, value is the sales     
     # With a tab (\t) between key and value
     # New line \n means new record 
-    sys.stdout.write("{0}\t{1}\n".format(category, sales))
+	sys.stdout.write("{0}\t{1}\n".format(category, sales))
+    else:
+	pass
